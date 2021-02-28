@@ -8,11 +8,22 @@
     </head>
     <body>
         <div id="gameArea">
-            <h1 id="gameTitle">My Game</h1>
+          <div id="titleArea">
+            <h1 id="gameTitle">The story of the man and the dragon</h1>
+            <h2>=================================================</h2>
             <h4>Press CTRL + SHIFT + R to restart</h4>
-            <p id="gameTextArea"> </p>
-            <input id="userInputText" placeholder="Enter answer here"></input>
-            <button id="userInputButton" onclick="">Confirm</button>
+          </div>
+
+            <div id="storyArea">
+                <div id="gameTextArea">
+                  <p id="gameText"> </p>
+                </div>
+                <div id="userInputTextArea">
+                  <input id="userInputText" placeholder="Enter answer here"></input>
+                  <button id="userInputButton" onclick="">Confirm</button>
+                </div>
+            </div>
+
         </div>
         <script src="story.js"></script>
         <script src="script.js"></script>

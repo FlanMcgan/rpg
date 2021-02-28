@@ -1,12 +1,13 @@
 const LOSE = -1;
 const WIN = -2;
 const START = 0;
+
 let story = {
   flag:START,
   winText:"The dragons corpse drifts out to sea.",
   killText:"The dragon attacks, and you die!",
   part:[{
-    text:"Looking up, You see a dragon! I have to hurry up searching",
+    text:"You have followed your treasure map up the canal and you are now by the sea. You find a rock formation just like you found on your map! You hear a noise above you looking up, You see a dragon! \n You need to hurry up with your search efforts!",
     actions:{
       run:{
         flag:LOSE,
