@@ -1,52 +1,32 @@
-const LOSE = -1;
-const WIN = -2;
-const START = 0;
 
 let story = {
-  flag:START,
+  flag:0,
   winText:"The dragons corpse drifts out to sea.",
   killText:"The dragon attacks, and you die!",
   part:[{
-    text:"You have followed your treasure map up the canal and you are now by the sea. You find a rock formation just like you found on your map! You hear a noise above you looking up, You see a dragon! \n You need to hurry up with your search efforts!",
+    text:`Riddle me this, what is black and white and "red" all over?`,
     actions:{
-      run:{
-        flag:LOSE,
-      },
-      search:{
-        text:"I see a sword on the ground! maybe I should grab it before the dragon attacks",
+       newspaper:{
+        text:"How clever! But we're not done. What about a geography question: what is the capital of New Brunswick?",
         flag:1,
       },
-      look:{
-        text:"The dragon is getting closer I should hurry up with my search efforts",
-      },
-    }
+     }
   },
   {
     actions:{
       run:{
-        flag:LOSE,
+        flag:-1,
       },
-      grab:{
-        text:"You picked up the sword!",
-        inventory:"sword",
+      Fredericton:{
+        text:"Huh? What happened?",
         flag:2,
       },
-      take:{
-        goto:"grab"
-      },
-      search:{
-        goto:"look",
-      },
-      look:{
-        text:"Maybe I should take the sword!",
-      },
-
     }
   },
   {
     actions:{
       run:{
-        flag:LOSE,
+        flag:-1,
       },
       search:{
         inventory:"spottedSHIELD",
@@ -58,7 +38,7 @@ let story = {
       attack:{
         required:"sword",
         text:"The wounded dragon tries to fly away, but crashes down into the sea.",
-        flag:WIN,
+        flag:-2
       },
       grab:{
         required:"spottedSHIELD",
@@ -74,13 +54,13 @@ let story = {
   {
     actions:{
       run:{
-        flag:LOSE,
+        flag:-1,
       },
 
       attack:{
         required:"sword",
         text:"The wounded dragon tries to fly away, but crashes down into the sea.",
-        flag:WIN,
+        flag:-2
       },
       defend:{
         required:"shield",
@@ -93,52 +73,3 @@ let story = {
     }
   },
 ]};
-
-
-//list of commands that might be nice to implement
-
-/*
-  open door
-  kick door
-  move east
-  go east
-  examine
-  take
-  drop
-  put in
-  put on
-  eat
-  drink
-  fill
-  smell
-  lock
-  unlock
-  sleep
-  wake up
-  undo
-  break
-  burn
-  look
-  look under
-  listen
-  listen to
-  push
-  pull
-  turn
-  feel
-  climb
-  wave
-  wear
-  take off
-  turn on
-  dig
-  enter
-  search
-  jump
-  pray
-  curse
-  sing
-  inventory
-  wait
-  repeat
-*/
