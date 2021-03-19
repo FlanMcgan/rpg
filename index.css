@@ -1,0 +1,65 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  text-align:center;
+background-color:lightgrey;
+display:flex;
+flex-direction: column;
+align-items:center;
+justify-content: center;
+}
+
+#gameArea{
+  margin-top:3vh;
+  width:80%;
+  height:100%;
+  background-color: grey;
+border: 2px dashed red;
+font-size: 1.5em;
+
+
+}
+#storyArea{
+  font-size: 2em;
+  width:100%;
+  color:white;
+  background-color: black;
+  display:flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  flex-direction: column;
+}
+#titleArea{
+  border-bottom: 2px dashed red;
+  padding:2em;
+}
+#gameTextArea{
+  width:99.9%;
+  height:60vh;
+  align-items: center;
+  align-self: center;
+
+}
+#userInputTextArea{
+  width:90%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+#userInputText{
+  text-align: center;
+  height:10vh;
+  border-radius: 1em;
+  width:400em;
+}
+#userInputButton{
+  width:50em;
+  height:10vh;
+  border-radius: 1em;
+  background-color: #6ff7a8;
+  border-color:#3a8559;
+  font-size: 0.5em;
+}
